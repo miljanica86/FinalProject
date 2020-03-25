@@ -1,6 +1,5 @@
 package utils;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -10,8 +9,6 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-
 
 public class ExcelUtils {
 	private static XSSFWorkbook wb = null;
@@ -66,15 +63,14 @@ public class ExcelUtils {
 		}
 		return "";
 	}
-	
-	
+
 	public static String getDataAtNum(int row, int column) {
 		try {
 			XSSFRow r = sheet.getRow(row);
 			XSSFCell celija = r.getCell(column);
 			double br = celija.getNumericCellValue();
-			String rez= "";
-			rez = rez + (int)br;
+			String rez = "";
+			rez = rez + (int) br;
 			return rez;
 		} catch (NullPointerException e) {
 			System.out.println(e.toString());
@@ -85,7 +81,6 @@ public class ExcelUtils {
 		}
 		return "";
 	}
-
 
 	public static boolean setDataAt(int row, int column, String data) {
 		try {
@@ -107,12 +102,10 @@ public class ExcelUtils {
 			return false;
 		}
 	}
-	
-	
 
 	public static int getRowNumber() {
 		try {
-			
+
 			return sheet.getLastRowNum() + 1;
 		} catch (Exception e) {
 			System.out.println(e.toString());
