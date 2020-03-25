@@ -21,7 +21,7 @@ public class PetStoreMenuPage {
 		this.locators = locators;
 		this.waiter = waiter;
 	}
-	
+
 	public List<WebElement> getLeftNav() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("leftNav")));
 	}
@@ -29,29 +29,30 @@ public class PetStoreMenuPage {
 	public void clickLeftNav(String species) {
 		List<WebElement> left = this.getLeftNav();
 		for (int i = 0; i < left.size(); i++) {
-			if(left.get(i).getText().contains(species)) {
+			if (left.get(i).getText().contains(species)) {
 				left.get(i).click();
 				break;
 			}
 		}
 	}
-	
+
 	public boolean isLeftNavRight(String species) {
-		this.clickLeftNav(species);		
-		return this.isItRightPage(species);		
+		this.clickLeftNav(species);
+		return this.isItRightPage(species);
 	}
-	
+
 	public boolean checkLeftNavLinks() {
 		List<WebElement> left = this.getLeftNav();
 		boolean isOk = false;
 		for (int i = 0; i < left.size(); i++) {
 			int status = verifyURLStatus(left.get(i).getAttribute("href"));
-			if(status < 400) {
+			if (status < 400) {
 				isOk = true;
 			}
-		} return isOk;
+		}
+		return isOk;
 	}
-	
+
 	public List<WebElement> getTopNav() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("topNav")));
 	}
@@ -59,29 +60,30 @@ public class PetStoreMenuPage {
 	public void clickTopNav(String species) {
 		List<WebElement> top = this.getTopNav();
 		for (int i = 0; i < top.size(); i++) {
-			if(top.get(i).getText().contains(species)) {
+			if (top.get(i).getText().contains(species)) {
 				top.get(i).click();
 				break;
 			}
 		}
 	}
-	
+
 	public boolean isTopNavRight(String species) {
-		this.clickTopNav(species);		
-		return this.isItRightPage(species);		
+		this.clickTopNav(species);
+		return this.isItRightPage(species);
 	}
-	
+
 	public boolean checkTopNavLinks() {
 		List<WebElement> top = this.getTopNav();
 		boolean isOk = false;
 		for (int i = 0; i < top.size(); i++) {
 			int status = verifyURLStatus(top.get(i).getAttribute("href"));
-			if(status < 400) {
+			if (status < 400) {
 				isOk = true;
 			}
-		} return isOk;
+		}
+		return isOk;
 	}
-	
+
 	public List<WebElement> getImgNav() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("imgNav")));
 	}
@@ -89,29 +91,30 @@ public class PetStoreMenuPage {
 	public void clickImgNav(String species) {
 		List<WebElement> img = this.getImgNav();
 		for (int i = 0; i < img.size(); i++) {
-			if(img.get(i).getText().contains(species)) {
+			if (img.get(i).getText().contains(species)) {
 				img.get(i).click();
 				break;
 			}
 		}
 	}
-	
+
 	public boolean isImgNavRight(String species) {
-		this.clickImgNav(species);		
-		return this.isItRightPage(species);		
+		this.clickImgNav(species);
+		return this.isItRightPage(species);
 	}
-	
+
 	public boolean checkImgNavLinks() {
 		List<WebElement> img = this.getImgNav();
 		boolean isOk = false;
 		for (int i = 0; i < img.size(); i++) {
 			int status = verifyURLStatus(img.get(i).getAttribute("href"));
-			if(status < 400) {
+			if (status < 400) {
 				isOk = true;
 			}
-		} return isOk;
+		}
+		return isOk;
 	}
-		
+
 	public boolean isItRightPage(String species) {
 		boolean isRight = false;
 		switch (species) {
@@ -141,9 +144,9 @@ public class PetStoreMenuPage {
 			isRight = false;
 			break;
 		}
-			return isRight;
-	}  
-	
+		return isRight;
+	}
+
 	public int verifyURLStatus(String urlString) {
 		int status = 404;
 		try {

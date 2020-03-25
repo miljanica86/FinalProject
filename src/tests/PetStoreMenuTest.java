@@ -53,8 +53,7 @@ public class PetStoreMenuTest {
 
 		PetStoreMenuPage psmp = new PetStoreMenuPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
-		List<String> species = new ArrayList<String>
-				(Arrays.asList("fish", "dogs", "reptiles", "cats", "birds"));
+		List<String> species = new ArrayList<String>(Arrays.asList("fish", "dogs", "reptiles", "cats", "birds"));
 
 		for (int i = 0; i < species.size(); i++) {
 			sa.assertTrue(psmp.isLeftNavRight(species.get(i)));
