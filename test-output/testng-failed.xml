@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.PetStoreMenuTest">
         <methods>
-          <include name="linkToRightPageTest"/>
+          <include name="TopMenuContentTest"/>
           <include name="setup"/>
           <include name="afterClass"/>
         </methods>
