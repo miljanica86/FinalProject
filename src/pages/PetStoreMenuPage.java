@@ -117,34 +117,46 @@ public class PetStoreMenuPage {
 
 	public boolean isItRightPage(String species) {
 		boolean isRight = false;
-		switch (species) {
-		case "fish":
-			if (this.driver.getCurrentUrl().contains("categoryId=FISH")) {
-				isRight = true;
-			}
-			break;
-		case "dogs":
-			if (this.driver.getCurrentUrl().contains("categoryId=DOGS")) {
-				isRight = true;
-			}
-		case "reptiles":
-			if (this.driver.getCurrentUrl().contains("categoryId=REPTILES")) {
-				isRight = true;
-			}
-		case "cats":
-			if (this.driver.getCurrentUrl().contains("categoryId=CATS")) {
-				isRight = true;
-			}
-		case "birds":
-			if (this.driver.getCurrentUrl().contains("categoryId=BIRDS")) {
-				isRight = true;
-			}
-			break;
-		default:
-			isRight = false;
-			break;
+		if (this.driver.getCurrentUrl().toLowerCase().contains("categoryId=" + species)) {
+			isRight = true;
 		}
 		return isRight;
+	}
+
+	public WebElement getCartPage() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("cartPageLink")));
+	}
+
+	public void clickCartPage() {
+		this.getCartPage().click();
+	}
+		
+	public boolean isClickedCartPage() {
+		return this.driver.getCurrentUrl().contains("viewCart=");
+	}
+
+	public WebElement getSignInPage() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("signInPageLink")));
+	}
+
+	public void clickSignInPage() {
+		this.getSignInPage().click();
+	}
+		
+	public boolean isClickedSignInPage() {
+		return this.driver.getCurrentUrl().contains("signonForm=");
+	}
+
+	public WebElement getHelpPage() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("aboutPageLink")));
+	}
+
+	public void clickHelpPage() {
+		this.getHelpPage().click();
+	}
+
+	public boolean isClickedHelpPage() {
+		return this.driver.getCurrentUrl().contains("help");
 	}
 
 	public int verifyURLStatus(String urlString) {
