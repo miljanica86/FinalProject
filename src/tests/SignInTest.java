@@ -11,6 +11,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import pages.SignInPage;
 
 public class SignInTest {
 	private WebDriver driver;
@@ -21,16 +25,24 @@ public class SignInTest {
 	public void setup() throws FileNotFoundException, IOException {
 		System.setProperty("webdriver.chrome.driver", "driver-lib\\chromedriver.exe");
 		this.driver = new ChromeDriver();
-		this.locators =  new Properties();
+		this.locators = new Properties();
 		locators.load(new FileInputStream("config/project.properties"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
-	
+
+	@Test
+	public void FillInFormTest() {
+		SignInPage sip = new SignInPage(driver, locators, waiter);
+		SoftAssert sa = new SoftAssert();
+
+		sip.register();
+		sa.assertTrue(sip.checkSignIn());
+	}
+
 	@AfterClass
 	public void afterClass() {
 		this.driver.close();
 	}
-
 }

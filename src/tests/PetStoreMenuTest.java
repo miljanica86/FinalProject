@@ -37,8 +37,6 @@ public class PetStoreMenuTest {
 
 	@Test
 	public void verifyUrlTest() {
-		driver.navigate().to(this.locators.getProperty("storeMenuUrl"));
-
 		PetStoreMenuPage psmp = new PetStoreMenuPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
 
