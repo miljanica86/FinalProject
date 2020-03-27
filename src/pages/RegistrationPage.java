@@ -174,8 +174,9 @@ public class RegistrationPage {
 	public void register() {
 		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));
 		ExcelUtils.setWorkSheet(1);
-	
-		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
+
+		for (int i = 1; i < ExcelUtils.getRowNumber() - 1; i++) {
+			driver.navigate().to(this.locators.getProperty("registrationUrl"));
 			ExcelUtils.setRandomAt(i, 0);
 			this.setUserId(ExcelUtils.getDataAt(i, 0));
 			this.setAllPass(ExcelUtils.getDataAt(i, 1));
@@ -190,13 +191,14 @@ public class RegistrationPage {
 			this.setZip(ExcelUtils.getDataAt(i, 10));
 			this.setCountry(ExcelUtils.getDataAt(i, 11));
 			ExcelUtils.setLangRandomAt(i, 12);
-			this.selectLanguage(ExcelUtils.getDataAt(i, 12));	
+			this.selectLanguage(ExcelUtils.getDataAt(i, 12));
 			ExcelUtils.setFavCategRandomAt(i, 13);
 			this.selectFavCategory(ExcelUtils.getDataAt(i, 13));
 			this.getMyListCheckBox().click();
 			this.getMyBannerCheckBox().click();
 			this.getSaveAccountInfoBtn().click();
 		}
+		ExcelUtils.closeExcell();
 	}
 
 	public WebElement getLogoImg() {
