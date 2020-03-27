@@ -1,33 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18484" started-at="2020-03-26T22:47:15 CET" finished-at="2020-03-26T22:47:34 CET">
+  <suite name="Default suite" duration-ms="49096" started-at="2020-03-27T02:41:57 CET" finished-at="2020-03-27T02:42:46 CET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18484" started-at="2020-03-26T22:47:15 CET" finished-at="2020-03-26T22:47:34 CET">
-      <class name="tests.PetStoreMenuTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.PetStoreMenuTest@3d99d22e]" name="setup" is-config="true" duration-ms="11734" started-at="2020-03-26T22:47:15 CET" finished-at="2020-03-26T22:47:27 CET">
+    <test name="Default test" duration-ms="49096" started-at="2020-03-27T02:41:57 CET" finished-at="2020-03-27T02:42:46 CET">
+      <class name="tests.RegistrationTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.RegistrationTest@3d99d22e]" name="setup" is-config="true" duration-ms="11727" started-at="2020-03-27T02:41:57 CET" finished-at="2020-03-27T02:42:09 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TopMenuContentTest()[pri:0, instance:tests.PetStoreMenuTest@3d99d22e]" name="TopMenuContentTest" duration-ms="2424" started-at="2020-03-26T22:47:27 CET" finished-at="2020-03-26T22:47:29 CET">
+        <test-method status="FAIL" signature="FillInFormTest()[pri:0, instance:tests.RegistrationTest@3d99d22e]" name="FillInFormTest" duration-ms="37047" started-at="2020-03-27T02:42:09 CET" finished-at="2020-03-27T02:42:46 CET">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/form/table[1]/tbody/tr[1]/td[2]/input"}
+  (Session info: chrome=80.0.3987.149)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DESKTOP-08P06U8', ip: '192.168.0.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Miljana\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51628}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4f5daafdc2deaf75b803e9bef4a7d8f0
+*** Element info: {Using=xpath, value=/html/body/div[2]/div/form/table[1]/tbody/tr[1]/td[2]/input}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/form/table[1]/tbody/tr[1]/td[2]/input"}
+  (Session info: chrome=80.0.3987.149)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'DESKTOP-08P06U8', ip: '192.168.0.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Miljana\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51628}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4f5daafdc2deaf75b803e9bef4a7d8f0
+*** Element info: {Using=xpath, value=/html/body/div[2]/div/form/table[1]/tbody/tr[1]/td[2]/input}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at pages.RegistrationPage.getUserId(RegistrationPage.java:25)
+at pages.RegistrationPage.setUserId(RegistrationPage.java:29)
+at pages.RegistrationPage.register(RegistrationPage.java:180)
+at tests.RegistrationTest.FillInFormTest(RegistrationTest.java:42)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TopMenuContentTest -->
-        <test-method status="PASS" signature="linkToRightPageTest()[pri:0, instance:tests.PetStoreMenuTest@3d99d22e]" name="linkToRightPageTest" duration-ms="1953" started-at="2020-03-26T22:47:29 CET" finished-at="2020-03-26T22:47:31 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- linkToRightPageTest -->
-        <test-method status="PASS" signature="verifyUrlTest()[pri:0, instance:tests.PetStoreMenuTest@3d99d22e]" name="verifyUrlTest" duration-ms="1955" started-at="2020-03-26T22:47:31 CET" finished-at="2020-03-26T22:47:33 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUrlTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@3d99d22e]" name="afterClass" is-config="true" duration-ms="335" started-at="2020-03-26T22:47:33 CET" finished-at="2020-03-26T22:47:34 CET">
+        </test-method> <!-- FillInFormTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationTest@3d99d22e]" name="afterClass" is-config="true" duration-ms="237" started-at="2020-03-27T02:42:46 CET" finished-at="2020-03-27T02:42:46 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- tests.PetStoreMenuTest -->
+      </class> <!-- tests.RegistrationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
