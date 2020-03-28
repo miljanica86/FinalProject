@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26277" started-at="2020-03-28T16:59:00 CET" finished-at="2020-03-28T16:59:26 CET">
+  <suite name="Default suite" duration-ms="23178" started-at="2020-03-28T17:01:27 CET" finished-at="2020-03-28T17:01:50 CET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26277" started-at="2020-03-28T16:59:00 CET" finished-at="2020-03-28T16:59:26 CET">
+    <test name="Default test" duration-ms="23178" started-at="2020-03-28T17:01:27 CET" finished-at="2020-03-28T17:01:50 CET">
       <class name="tests.CartTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.CartTest@3d99d22e]" name="setup" is-config="true" duration-ms="9501" started-at="2020-03-28T16:59:00 CET" finished-at="2020-03-28T16:59:09 CET">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.CartTest@3d99d22e]" name="setup" is-config="true" duration-ms="11655" started-at="2020-03-28T17:01:27 CET" finished-at="2020-03-28T17:01:38 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="addToCartTest()[pri:0, instance:tests.CartTest@3d99d22e]" name="addToCartTest" duration-ms="6707" started-at="2020-03-28T16:59:09 CET" finished-at="2020-03-28T16:59:16 CET">
+        <test-method status="PASS" signature="addToCartTest()[pri:0, instance:tests.CartTest@3d99d22e]" name="addToCartTest" duration-ms="6549" started-at="2020-03-28T17:01:38 CET" finished-at="2020-03-28T17:01:45 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartTest -->
-        <test-method status="PASS" signature="clearCookiesTest()[pri:0, instance:tests.CartTest@3d99d22e]" name="clearCookiesTest" duration-ms="5814" started-at="2020-03-28T16:59:16 CET" finished-at="2020-03-28T16:59:22 CET">
+        <test-method status="PASS" signature="clearCookiesTest()[pri:0, instance:tests.CartTest@3d99d22e]" name="clearCookiesTest" duration-ms="4685" started-at="2020-03-28T17:01:45 CET" finished-at="2020-03-28T17:01:50 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearCookiesTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartTest@3d99d22e]" name="afterClass" is-config="true" duration-ms="4189" started-at="2020-03-28T16:59:22 CET" finished-at="2020-03-28T16:59:26 CET">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartTest@3d99d22e]" name="afterClass" is-config="true" duration-ms="226" started-at="2020-03-28T17:01:50 CET" finished-at="2020-03-28T17:01:50 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
