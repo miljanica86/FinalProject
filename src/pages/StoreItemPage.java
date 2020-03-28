@@ -34,7 +34,7 @@ public class StoreItemPage {
 		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));
 		ExcelUtils.setWorkSheet(0);
 		
-		for (int i = 1; i < ExcelUtils.getRowNumber() - 1; i++) {
+		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
 			this.driver.navigate().to(ExcelUtils.getDataAt(i, 1));
 			this.clickAddToCartBtn();
 		}
@@ -49,14 +49,12 @@ public class StoreItemPage {
 		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));
 		ExcelUtils.setWorkSheet(0);
 
-		for (int i = 1; i < ExcelUtils.getRowNumber() - 1; i++) {
-			if (getCartId().toString().equals(ExcelUtils.getDataAt(i, 1))) {
+		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
+			if (getCartId().toString().equals(ExcelUtils.getDataAt(i, 0))) {
 				break;
 			}
 			added = true;
 		}
 		return added;
 	}
-	
-
 }

@@ -36,16 +36,25 @@ public class CartTest {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
-	@Test
+	@Test(priority = 1)
 	public void addToCartTest() {
 		StoreItemPage sip = new StoreItemPage(driver, locators, waiter);
+		CartPage cp = new CartPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
 		
 		sip.addAllToCart();
-		sa.assertTrue(sip.isAdded());
+		sa.assertTrue(sip.isAdded());		
 	}
 	
-	@Test
+	@Test(priority = 2)
+	public void totalCostTest() {
+		CartPage cp = new CartPage(driver, locators, waiter);
+		SoftAssert sa = new SoftAssert();
+		
+		sa.assertTrue(cp.isEqual());
+	}
+	
+	@Test(priority = 3)
 	public void clearCookiesTest() {
 		StoreItemPage sip = new StoreItemPage(driver, locators, waiter);
 		CartPage cp = new CartPage(driver, locators, waiter);
