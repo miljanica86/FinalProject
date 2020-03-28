@@ -1,5 +1,62 @@
 package pages;
 
+import java.util.List;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByLinkText;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utils.ExcelUtils;
+
 public class StoreItemPage {
+	private WebDriver driver;
+	private Properties locators;
+	private WebDriverWait waiter;
+
+	public StoreItemPage(WebDriver driver, Properties locators, WebDriverWait waiter) {
+		this.driver = driver;
+		this.locators = locators;
+		this.waiter = waiter;
+	}
+	
+	public WebElement getAddToCartBtn() {
+		return this.driver.findElement(By.xpath(this.locators.getProperty("addToCartBtn")));
+	}
+
+	public void clickAddToCartBtn() {
+		this.getAddToCartBtn().click();
+	}
+	
+	public void addAllToCart() {
+		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));
+		ExcelUtils.setWorkSheet(0);
+		
+		for (int i = 1; i < ExcelUtils.getRowNumber() - 1; i++) {
+			this.driver.navigate().to(ExcelUtils.getDataAt(i, 1));
+			this.clickAddToCartBtn();
+		}
+	}
+	
+	public List<WebElement> getCartId() {
+		return this.driver.findElements(By.xpath(this.locators.getProperty("idCartList")));
+	}
+	
+	public boolean isAdded() {
+		boolean added = false;
+		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));
+		ExcelUtils.setWorkSheet(0);
+
+		for (int i = 1; i < ExcelUtils.getRowNumber() - 1; i++) {
+			if (getCartId().toString().equals(ExcelUtils.getDataAt(i, 1))) {
+				break;
+			}
+			added = true;
+		}
+		return added;
+	}
+	
 
 }

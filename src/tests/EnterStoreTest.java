@@ -34,13 +34,13 @@ public class EnterStoreTest {
 	}
 	
 	@Test
-	public void EnterTest() {
+	public void enterTest() {
 		driver.navigate().to(this.locators.getProperty("storeUrl"));
 		
 		HomePage hp = new HomePage(driver, locators, waiter);
-		hp.clickEnter();
-		
 		SoftAssert sa = new SoftAssert();
+		
+		hp.clickEnter();		
 		sa.assertTrue(hp.isEntered());
 	}
 	

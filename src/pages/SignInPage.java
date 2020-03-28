@@ -60,10 +60,6 @@ public class SignInPage {
 	}
 
 	public boolean checkSignIn() {
-		boolean isSuccessful = false;
-		if (this.getWelcomeMsg().getText().contains("Welcome")) {
-			isSuccessful = true;
-		}
-		return isSuccessful;
+		return this.getWelcomeMsg().getText().contains("Welcome");
 	}
 }

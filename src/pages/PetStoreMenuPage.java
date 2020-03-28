@@ -116,11 +116,7 @@ public class PetStoreMenuPage {
 	}
 
 	public boolean isItRightPage(String species) {
-		boolean isRight = false;
-		if (this.driver.getCurrentUrl().toLowerCase().contains("categoryId=" + species)) {
-			isRight = true;
-		}
-		return isRight;
+		return this.driver.getCurrentUrl().toLowerCase().contains("categoryId=" + species);
 	}
 
 	public WebElement getCartPage() {

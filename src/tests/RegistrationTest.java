@@ -33,7 +33,7 @@ public class RegistrationTest {
 	}
 
 	@Test
-	public void FillInFormTest() {
+	public void fillInFormTest() {
 		driver.navigate().to(this.locators.getProperty("registrationUrl"));
 
 		RegistrationPage rp = new RegistrationPage(driver, locators, waiter);

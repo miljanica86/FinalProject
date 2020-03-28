@@ -206,10 +206,6 @@ public class RegistrationPage {
 	}
 
 	public boolean checkRegistration() {
-		boolean isSuccessful = false;
-		if (this.getLogoImg().isDisplayed()) {
-			isSuccessful = true;
-		}
-		return isSuccessful;
+		return this.getLogoImg().isDisplayed();
 	}
 }

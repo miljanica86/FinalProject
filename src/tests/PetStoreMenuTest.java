@@ -68,7 +68,7 @@ public class PetStoreMenuTest {
 	}
 	
 	@Test
-	public void TopMenuContentTest() {
+	public void topMenuContentTest() {
 		driver.navigate().to(this.locators.getProperty("storeMenuUrl"));
 
 		PetStoreMenuPage psmp = new PetStoreMenuPage(driver, locators, waiter);
