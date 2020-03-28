@@ -6,7 +6,7 @@
       <class name="tests.CartTest">
         <methods>
           <include name="setup"/>
-          <include name="clearCookiesTest"/>
+          <include name="addToCartTest"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- tests.CartTest -->
