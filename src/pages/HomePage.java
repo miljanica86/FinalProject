@@ -27,7 +27,7 @@ public class HomePage {
 	}
 
 	public WebElement getSignInBtn() {
-		return this.driver.findElement(By.xpath(this.locators.getProperty("signIn")));
+		return this.driver.findElement(By.xpath(this.locators.getProperty("signInPageLink")));
 	}
 
 	public boolean isEntered() {
