@@ -132,6 +132,7 @@ public class PetStoreMenuPage {
 	}
 
 	public WebElement getSignInPage() {
+		driver.navigate().to(this.locators.getProperty("storeMenuUrl"));
 		return this.driver.findElement(By.xpath(this.locators.getProperty("signInPageLink")));
 	}
 
@@ -140,6 +141,7 @@ public class PetStoreMenuPage {
 	}
 		
 	public boolean isClickedSignInPage() {
+		driver.navigate().to(this.locators.getProperty("storeMenuUrl"));
 		return this.driver.getCurrentUrl().contains("signonForm=");
 	}
 
@@ -148,6 +150,7 @@ public class PetStoreMenuPage {
 	}
 
 	public void clickHelpPage() {
+		driver.navigate().to(this.locators.getProperty("storeMenuUrl"));
 		this.getHelpPage().click();
 	}
 

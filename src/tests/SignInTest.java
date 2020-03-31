@@ -45,7 +45,7 @@ public class SignInTest {
 	}
 
 	@Test
-	public void FillInFormTest() {
+	public void SignInTest() {
 		SignInPage sip = new SignInPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
 
