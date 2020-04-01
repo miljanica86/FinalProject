@@ -22,6 +22,7 @@ public class PetStoreMenuPage {
 		this.waiter = waiter;
 	}
 
+	// Left navigation menu get, click and check and verifyUrl
 	public List<WebElement> getLeftNav() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("leftNav")));
 	}
@@ -53,6 +54,7 @@ public class PetStoreMenuPage {
 		return isOk;
 	}
 
+	// Top navigation menu get, click and check and verifyUrl
 	public List<WebElement> getTopNav() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("topNav")));
 	}
@@ -84,6 +86,7 @@ public class PetStoreMenuPage {
 		return isOk;
 	}
 
+	// Images navigation menu get, click, check and verifyUrl
 	public List<WebElement> getImgNav() {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("imgNav")));
 	}
@@ -115,10 +118,7 @@ public class PetStoreMenuPage {
 		return isOk;
 	}
 
-	public boolean isItRightPage(String species) {
-		return this.driver.getCurrentUrl().toLowerCase().contains("categoryId=" + species);
-	}
-
+	// CartPage link get, click, check
 	public WebElement getCartPage() {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("cartPageLink")));
 	}
@@ -126,11 +126,12 @@ public class PetStoreMenuPage {
 	public void clickCartPage() {
 		this.getCartPage().click();
 	}
-		
+
 	public boolean isClickedCartPage() {
 		return this.driver.getCurrentUrl().contains("viewCart=");
 	}
 
+	// SignInPage link get, click, check
 	public WebElement getSignInPage() {
 		driver.navigate().to(this.locators.getProperty("storeMenuUrl"));
 		return this.driver.findElement(By.xpath(this.locators.getProperty("signInPageLink")));
@@ -139,12 +140,13 @@ public class PetStoreMenuPage {
 	public void clickSignInPage() {
 		this.getSignInPage().click();
 	}
-		
+
 	public boolean isClickedSignInPage() {
 		driver.navigate().to(this.locators.getProperty("storeMenuUrl"));
 		return this.driver.getCurrentUrl().contains("signonForm=");
 	}
 
+	// HelpPage link get, click, check
 	public WebElement getHelpPage() {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("aboutPageLink")));
 	}
@@ -158,6 +160,12 @@ public class PetStoreMenuPage {
 		return this.driver.getCurrentUrl().contains("help");
 	}
 
+	// Every link leads to right page method
+	public boolean isItRightPage(String species) {
+		return this.driver.getCurrentUrl().toLowerCase().contains("categoryId=" + species);
+	}
+
+	// VerifyUrlStatus method
 	public int verifyURLStatus(String urlString) {
 		int status = 404;
 		try {

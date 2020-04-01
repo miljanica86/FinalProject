@@ -37,7 +37,7 @@ public class RegistrationTest {
 		} else {
 			throw new Exception("Browser is not correct");
 		}
-		this.locators =  new Properties();
+		this.locators = new Properties();
 		locators.load(new FileInputStream("config/project.properties"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);

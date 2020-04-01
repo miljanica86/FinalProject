@@ -37,7 +37,7 @@ public class SignInTest {
 		} else {
 			throw new Exception("Browser is not correct");
 		}
-		this.locators =  new Properties();
+		this.locators = new Properties();
 		locators.load(new FileInputStream("config/project.properties"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -45,11 +45,11 @@ public class SignInTest {
 	}
 
 	@Test
-	public void SignInTest() {
+	public void SigningInTest() {
 		SignInPage sip = new SignInPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
 
-		sip.register();
+		sip.signIn();
 		sa.assertTrue(sip.checkSignIn());
 	}
 

@@ -19,12 +19,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class CartTest {
 	private WebDriver driver;
 	private Properties locators;
 	private WebDriverWait waiter;
-
 
 	@BeforeClass
 	@Parameters("browser")
@@ -41,42 +39,42 @@ public class CartTest {
 		} else {
 			throw new Exception("Browser is not correct");
 		}
-		this.locators =  new Properties();
+		this.locators = new Properties();
 		locators.load(new FileInputStream("config/project.properties"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
-	
+
 	@Test(priority = 1)
 	public void addToCartTest() {
 		StoreItemPage sip = new StoreItemPage(driver, locators, waiter);
 		CartPage cp = new CartPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
-		
+
 		sip.addAllToCart();
-		sa.assertTrue(sip.isAdded());		
+		sa.assertTrue(sip.isAdded());
 	}
-	
+
 	@Test(priority = 2)
 	public void totalCostTest() {
 		CartPage cp = new CartPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
-		
+
 		sa.assertTrue(cp.isEqual());
 	}
-	
+
 	@Test(priority = 3)
 	public void clearCookiesTest() {
 		StoreItemPage sip = new StoreItemPage(driver, locators, waiter);
 		CartPage cp = new CartPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
-		
+
 		sip.addAllToCart();
 		cp.deleteAllCookies();
-		sa.assertTrue(cp.isEmpty());		
+		sa.assertTrue(cp.isEmpty());
 	}
-	
+
 	@AfterClass
 	public void afterClass() {
 		this.driver.close();

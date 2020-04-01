@@ -18,7 +18,6 @@ import org.testng.asserts.SoftAssert;
 
 import pages.HomePage;
 
-
 public class EnterStoreTest {
 	private WebDriver driver;
 	private Properties locators;
@@ -39,24 +38,24 @@ public class EnterStoreTest {
 		} else {
 			throw new Exception("Browser is not correct");
 		}
-		this.locators =  new Properties();
+		this.locators = new Properties();
 		locators.load(new FileInputStream("config/project.properties"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
-	
+
 	@Test
 	public void enterTest() {
 		driver.navigate().to(this.locators.getProperty("storeUrl"));
-		
+
 		HomePage hp = new HomePage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
-		
-		hp.clickEnter();		
+
+		hp.clickEnter();
 		sa.assertTrue(hp.isEntered());
 	}
-	
+
 	@AfterClass
 	public void afterClass() {
 		this.driver.close();

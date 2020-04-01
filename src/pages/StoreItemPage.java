@@ -30,6 +30,7 @@ public class StoreItemPage {
 		this.getAddToCartBtn().click();
 	}
 	
+	// Adding to cart method using Excel data
 	public void addAllToCart() {
 		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));
 		ExcelUtils.setWorkSheet(0);
@@ -44,6 +45,7 @@ public class StoreItemPage {
 		return this.driver.findElements(By.xpath(this.locators.getProperty("idCartList")));
 	}
 	
+	// Check method using Excel data
 	public boolean isAdded() {
 		boolean added = false;
 		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));

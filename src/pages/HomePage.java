@@ -17,7 +17,7 @@ public class HomePage {
 		this.locators = locators;
 		this.waiter = waiter;
 	}
-
+	
 	public WebElement getEnter() {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("enterTheStore")));
 	}

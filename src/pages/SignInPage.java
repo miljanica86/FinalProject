@@ -42,7 +42,8 @@ public class SignInPage {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("signInBtn")));
 	}
 
-	public void register() {
+	// Sign in method using Excel data
+	public void signIn() {
 		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));
 		ExcelUtils.setWorkSheet(1);
 

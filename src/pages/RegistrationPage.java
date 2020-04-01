@@ -171,6 +171,7 @@ public class RegistrationPage {
 		return this.driver.findElement(By.xpath(this.locators.getProperty("saveAccountInfoBtn")));
 	}
 
+	// Registration method using Excel data
 	public void register() {
 		ExcelUtils.setExcell(this.locators.getProperty("dataSource"));
 		ExcelUtils.setWorkSheet(1);
