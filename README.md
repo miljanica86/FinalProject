@@ -1,7 +1,7 @@
 # FinalProject
-#### Web test automation project using Eclipse IDE, Java, Apache POI, TestNG, Selenium and Page Object Model (POM)
+### Web test automation project using Eclipse IDE, Java, Apache POI, TestNG, Selenium and Page Object Model (POM)
 
-#### Target application URL is: https://petstore.octoperf.com/
+### Target application URL is: https://petstore.octoperf.com/
 
 ### Target browsers: 
 
