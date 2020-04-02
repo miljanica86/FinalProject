@@ -6,7 +6,7 @@
 - Version: 2018-09 (4.9.0)
 - Build id: 20180917-1800
 #### Java
-- Version: 1.8
+- Version: 1.8.0_241
 #### Apache POI
 - Version: 2.0
 #### TestNG 
