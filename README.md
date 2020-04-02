@@ -8,11 +8,11 @@
 #### Java
 - Version: 1.8.0_241
 #### Apache POI
-- version: 2.0
+- Version: 2.0
 #### TestNG 
-- version: 7.0.0
+- Version: 7.0.0
 #### Selenium 
-- version: 3.141.59
+- Version: 3.141.59
 
 ### Target application URL is: https://petstore.octoperf.com/
 
