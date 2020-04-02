@@ -1,5 +1,18 @@
 # FinalProject
-### Web test automation project using Eclipse IDE, Java, Apache POI, TestNG, Selenium and Page Object Model (POM)
+
+### Web test automation project using:
+#### OS: Windows 10, v.10.0, x86_64 / win32
+#### Eclipse IDE for Web Developers
+- Version: 2018-09 (4.9.0)
+- Build id: 20180917-1800
+#### Java
+- Version: 1.8.0_241
+#### Apache POI
+- version: 2.0
+#### TestNG 
+- version: 7.0.0
+#### Selenium 
+- version: 3.141.59
 
 ### Target application URL is: https://petstore.octoperf.com/
 
