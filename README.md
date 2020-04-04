@@ -22,7 +22,7 @@
 - Browser version: 80.0.3987.149 (Official Build) (64-bit)
 
 #### Firefox
-- Browser version: 74.0 (64-bit)
+- Browser version: 74.0.1 (64-bit)
 
 #### Edge
 - Browser version: 80.0.361.69 (Official build) (64-bit)
